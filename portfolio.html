@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abu's Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .project-card {
+            transition: all 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-8px);
+        }
+        
+        .gradient-bg {       
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .text-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .skill-tag {
+            transition: all 0.3s ease;
+        }
+        
+        .skill-tag:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 shadow-sm">
+        <div class="max-w-6xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold text-gradient">My Portfolio</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-purple-600 transition-colors">Home</a>
+                    <a href="#about" class="text-gray-700 hover:text-purple-600 transition-colors">About</a>
+                    <a href="#projects" class="text-gray-700 hover:text-purple-600 transition-colors">Projects</a>
+                    <a href="#services" class="text-gray-700 hover:text-purple-600 transition-colors">Services</a>
+                    <a href="#gallery" class="text-gray-700 hover:text-purple-600 transition-colors">Gallery</a>
+                    <a href="#contact" class="text-gray-700 hover:text-purple-600 transition-colors">Contact</a>
+                </div>
+                <button class="md:hidden text-gray-700" onclick="toggleMobileMenu()">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            <div id="mobileMenu" class="hidden md:hidden mt-4 space-y-2">
+                <a href="#home" class="block text-gray-700 hover:text-purple-600 transition-colors py-2">Home</a>
+                <a href="#about" class="block text-gray-700 hover:text-purple-600 transition-colors py-2">About</a>
+                <a href="#projects" class="block text-gray-700 hover:text-purple-600 transition-colors py-2">Projects</a>
+                <a href="#services" class="block text-gray-700 hover:text-purple-600 transition-colors py-2">Services</a>
+                <a href="#gallery" class="block text-gray-700 hover:text-purple-600 transition-colors py-2">Gallery</a>
+                <a href="#contact" class="block text-gray-700 hover:text-purple-600 transition-colors py-2">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center relative" style="background-image: url('images/landing_page.jpg'); background-size: cover; background-position: center; background-attachment: fixed;">
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div class="max-w-6xl mx-auto px-6 text-center text-white relative z-10">
+            <div class="fade-in">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6">Full Stack Developer</h1>
+                <p class="text-xl md:text-2xl mb-8 opacity-90">Building innovative web applications that make a difference</p>
+                <div class="space-x-4">
+                    <button onclick="scrollToSection('projects')" class="bg-white text-purple-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors">
+                        View My Work
+                    </button>
+                    <button onclick="scrollToSection('contact')" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-purple-600 transition-colors">
+                        Get In Touch
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="fade-in text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">About Me</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto text-justify leading-relaxed">
+                    As a passionate full-stack web developer, I bring a unique blend of technical skill and creative vision to every project. My expertise extends beyond coding into graphic design, where I craft intuitive and visually compelling user experiences. I am also an educator and a virtual assistant, driven by a commitment to sharing knowledge and providing seamless support. Whether I'm building robust applications, designing captivating visuals, or helping others navigate the digital landscape, I am dedicated to creating impactful and meaningful experiences from start to finish.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="fade-in">
+                    <div class="bg-gradient-to-br from-purple-100 to-blue-100 rounded-2xl p-8 h-80 flex items-center justify-center">
+                        <div class="text-6xl">🎨</div>
+                    </div>
+                </div>
+                
+                <div class="fade-in">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-6">My Development Approach</h3>
+                    <p class="text-gray-600 mb-6">
+                        I believe in building applications that truly serve users' needs. Every project starts with understanding the problem deeply and ends with a solution that's both technically robust and user-friendly.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="skill-tag bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-center font-medium">React.js</div>
+                        <div class="skill-tag bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-center font-medium">Node.js</div>
+                        <div class="skill-tag bg-green-100 text-green-800 px-4 py-2 rounded-full text-center font-medium">MongoDB</div>
+                        <div class="skill-tag bg-pink-100 text-pink-800 px-4 py-2 rounded-full text-center font-medium">Python</div>
+                    </div>
+                    
+                    <h4 class="text-lg font-semibold text-gray-800 mt-8 mb-4">Creative Skills</h4>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="skill-tag bg-red-100 text-red-800 px-4 py-2 rounded-full text-center font-medium">Video Editing</div>
+                        <div class="skill-tag bg-orange-100 text-orange-800 px-4 py-2 rounded-full text-center font-medium">Capcut</div>
+                        <div class="skill-tag bg-yellow-100 text-yellow-800 px-4 py-2 rounded-full text-center font-medium">After Effects</div>
+                        <div class="skill-tag bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full text-center font-medium">Canva Design</div>
+                    </div>
+                    
+                    <div class="mt-6">
+                        <a href="https://www.canva.com/design/DAGsn7PPEfI/eBPYo3lvW_lTPN2XIXrUDw/edit?utm_content=DAGsn7PPEfI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" class="inline-flex items-center bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors">
+                            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                            </svg>
+                            View Design Portfolio
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="fade-in text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Featured Projects</h2>
+                <p class="text-xl text-gray-600">A selection of my recent work</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Featured Project: Mindwell -->
+                <div class="project-card fade-in bg-white rounded-2xl overflow-hidden shadow-lg lg:col-span-2">
+                    <div class="bg-gradient-to-br from-green-400 to-teal-500 h-48 flex items-center justify-center">
+                        <div class="text-white text-4xl">🧠</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Mindwell - Mental Health Platform</h3>
+                        <p class="text-gray-600 mb-4">A comprehensive mental health web application providing resources, self-assessment tools, and support for mental wellness. Built with modern web technologies to create an accessible and user-friendly experience.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">React.js</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Node.js</span>
+                            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">MongoDB</span>
+                            <span class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm">Express.js</span>
+                        </div>
+                        <div class="flex space-x-3">
+                            <a href="https://github.com/abu00123/Mindwell-Mental_health.git" target="_blank" class="bg-gray-800 text-white px-4 py-2 rounded-lg text-sm hover:bg-gray-700 transition-colors">View Code</a>
+                            <a href="https://mindwell-mentalhealth-production.up.railway.app/signup" target="_blank" class="bg-green-600 text-white px-4 py-2 rounded-lg text-sm hover:bg-green-700 transition-colors inline-block">Sign Up</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card fade-in bg-white rounded-2xl overflow-hidden shadow-lg">
+                    <div class="bg-gradient-to-br from-blue-400 to-cyan-400 h-48 flex items-center justify-center">
+                        <div class="text-white text-4xl">🌐</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Portfolio Website</h3>
+                        <p class="text-gray-600 mb-4">A responsive portfolio website showcasing my development projects and skills.</p>
+                        <div class="flex space-x-2">
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">HTML/CSS</span>
+                            <span class="bg-cyan-100 text-cyan-800 px-3 py-1 rounded-full text-sm">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card fade-in bg-white rounded-2xl overflow-hidden shadow-lg">
+                    <div class="bg-gradient-to-br from-purple-400 to-pink-400 h-48 flex items-center justify-center">
+                        <div class="text-white text-4xl">⚡</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Coming Soon</h3>
+                        <p class="text-gray-600 mb-4">More exciting projects are in development. Stay tuned for updates!</p>
+                        <div class="flex space-x-2">
+                            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">In Progress</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button class="bg-purple-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-purple-700 transition-colors">
+                    View All Projects
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="fade-in text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Professional Services</h2>
+                <p class="text-xl text-gray-600">Comprehensive support across multiple domains</p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Virtual Assistant -->
+                <div class="fade-in bg-white rounded-2xl p-8 shadow-lg">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-blue-100 p-4 rounded-full mr-4">
+                            <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800">Virtual Assistant</h3>
+                    </div>
+                    <div class="mb-4">
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">ALX Africa Graduate</span>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed">
+                        I am a virtual assistant graduate from ALX Africa. I offer remote administrative, technical, and creative support to clients from all over the world. Working independently, I collaborate with individuals and businesses through online tools to help them stay organized, efficient, and focused on what matters most. Whether it's managing schedules, handling communications, conducting research, or supporting digital projects, I offer flexible and reliable assistance tailored to each client's unique needs. As a virtual assistant, I bring both professionalism and convenience—helping clients save time, reduce overhead costs, and operate smoothly without the need for in-house staff.
+                    </p>
+                </div>
+                
+                <!-- Educator -->
+                <div class="fade-in bg-white rounded-2xl p-8 shadow-lg">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-green-100 p-4 rounded-full mr-4">
+                            <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800">Educator</h3>
+                    </div>
+                    <div class="mb-4">
+                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">Learning Specialist</span>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed">
+                        I am an educator, and I specialize in guiding learners through meaningful educational experiences that foster knowledge, skills, and personal growth. My role goes beyond delivering lessons—I design and adapt curriculum to meet the diverse needs of students, ensuring that each learner has the opportunity to thrive. I create inclusive and supportive learning environments where every individual feels valued, heard, and empowered to participate.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="fade-in text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Gallery</h2>
+                <p class="text-xl text-gray-600">Places I've visited and events I've attended</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Photo placeholders - replace with your actual images -->
+                <div class="fade-in rounded-lg h-64 overflow-hidden shadow-lg relative">
+                    <img src="images/CMU-Africa Innovation Summit 2024.jpg" alt="CMU-Africa Innovation Summit 2024" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                        <p class="text-white font-medium">CMU-Africa Innovation Summit 2024</p>
+                    </div>
+                </div>
+                
+                <div class="fade-in rounded-lg h-64 overflow-hidden shadow-lg relative">
+                    <img src="images/The Annual Bankers conference 2025, Kampala.jpg" alt="The Annual Bankers Conference 2025, Kampala" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                        <p class="text-white font-medium">Annual Bankers Conference 2025, Kampala</p>
+                    </div>
+                </div>
+                
+                <div class="fade-in rounded-lg h-64 overflow-hidden shadow-lg relative">
+                    <img src="images/Yale Model African Union ( YMAU) Nairobi 2025.jpg" alt="Yale Model African Union (YMAU) Nairobi 2025" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                        <p class="text-white font-medium">YMAU Nairobi 2025</p>
+                    </div>
+                </div>
+                
+                <div class="fade-in rounded-lg h-64 overflow-hidden shadow-lg relative">
+                    <img src="images/Africa Energy Expo, Kigali 2024.jpg" alt="Africa Energy Expo, Kigali 2024" class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-300">
+                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                        <p class="text-white font-medium">Africa Energy Expo, Kigali 2024</p>
+                    </div>
+                </div>
+                
+                <div class="fade-in bg-gradient-to-br from-purple-400 to-pink-500 rounded-lg h-64 flex items-center justify-center">
+                    <div class="text-white text-center">
+                        <div class="text-4xl mb-2">🏛️</div>
+                        <p class="font-medium">City Tour</p>
+                    </div>
+                </div>
+                
+                <div class="fade-in bg-gradient-to-br from-teal-400 to-green-500 rounded-lg h-64 flex items-center justify-center">
+                    <div class="text-white text-center">
+                        <div class="text-4xl mb-2">🎉</div>
+                        <p class="font-medium">Celebration</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="fade-in text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Let's Work Together</h2>
+                <p class="text-xl text-gray-600">Have a project in mind? I'd love to hear about it!</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="fade-in">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-6">Get In Touch</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-4">
+                            <div class="bg-purple-100 p-3 rounded-full">
+                                <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="font-medium text-gray-800">Email</p>
+                                <p class="text-gray-600">a.garang@alustudent.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center space-x-4">
+                            <div class="bg-blue-100 p-3 rounded-full">
+                                <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="font-medium text-gray-800">GitHub</p>
+                                <p class="text-gray-600">https://github.com/abu00123</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center space-x-4">
+                            <div class="bg-green-100 p-3 rounded-full">
+                                <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="font-medium text-gray-800">Location</p>
+                                <p class="text-gray-600">Available for Remote Work</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="fade-in">
+                    <form class="space-y-6" onsubmit="handleSubmit(event)">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Name</label>
+                            <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent" placeholder="Your name">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                            <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent" placeholder="your@email.com">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                            <textarea rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent" placeholder="Tell me about your project..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-purple-600 text-white py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors">
+                            Send Message
+                        </button>
+                        
+                        <p class="text-sm text-gray-500 text-center">
+                            <span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded">Demo Form</span> - This is a sample contact form
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center">
+                <div class="text-2xl font-bold text-gradient mb-4">Abraham's Portfolio Website</div>
+                <p class="text-gray-400 mb-6">Building web applications that make a difference</p>
+                <div class="flex justify-center space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24c6.624 0 11.99-5.367 11.99-11.987C24.007 5.367 18.641.001 12.017.001z"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="mt-8 pt-8 border-t border-gray-700 text-gray-400">
+                    <p>&copy; 2024 Portfolio. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Form submission handler
+        function handleSubmit(event) {
+            event.preventDefault();
+            alert('Thank you for your message! This is a demo form - in a real website, this would send your message.');
+        }
+
+        // Fade in animation on scroll
+        function handleScrollAnimations() {
+            const elements = document.querySelectorAll('.fade-in');
+            
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+
+        // Initialize animations
+        window.addEventListener('scroll', handleScrollAnimations);
+        window.addEventListener('load', handleScrollAnimations);
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+                
+                // Close mobile menu if open
+                const mobileMenu = document.getElementById('mobileMenu');
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'966ba3e51587c836',t:'MTc1Mzc4MTg3My4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
