@@ -113,8 +113,9 @@
             
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div class="fade-in">
-                    <div class="bg-gradient-to-br from-purple-100 to-blue-100 rounded-2xl p-8 h-80 flex items-center justify-center">
-                        <div class="text-6xl">🎨</div>
+                    <div class="relative rounded-2xl overflow-hidden h-96 shadow-xl">
+                        <img src="images/aboutme.jpg" alt="About Me" class="w-full h-full object-cover object-top">
+                        <div class="absolute inset-0 bg-gradient-to-t from-purple-600/20 to-transparent"></div>
                     </div>
                 </div>
                 
@@ -125,18 +126,18 @@
                     </p>
                     
                     <div class="grid grid-cols-2 gap-4">
-                        <div class="skill-tag bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-center font-medium">React.js</div>
-                        <div class="skill-tag bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-center font-medium">Node.js</div>
-                        <div class="skill-tag bg-green-100 text-green-800 px-4 py-2 rounded-full text-center font-medium">MongoDB</div>
-                        <div class="skill-tag bg-pink-100 text-pink-800 px-4 py-2 rounded-full text-center font-medium">Python</div>
+                        <div class="skill-tag bg-red-100 text-red-700 px-4 py-2 rounded-full text-center font-medium">React.js</div>
+                        <div class="skill-tag bg-sky-100 text-sky-700 px-4 py-2 rounded-full text-center font-medium">Node.js</div>
+                        <div class="skill-tag bg-green-50 text-green-700 px-4 py-2 rounded-full text-center font-medium">MongoDB</div>
+                        <div class="skill-tag bg-gray-100 text-gray-700 px-4 py-2 rounded-full text-center font-medium">Python</div>
                     </div>
                     
                     <h4 class="text-lg font-semibold text-gray-800 mt-8 mb-4">Creative Skills</h4>
                     <div class="grid grid-cols-2 gap-4">
-                        <div class="skill-tag bg-red-100 text-red-800 px-4 py-2 rounded-full text-center font-medium">Video Editing</div>
-                        <div class="skill-tag bg-orange-100 text-orange-800 px-4 py-2 rounded-full text-center font-medium">Capcut</div>
-                        <div class="skill-tag bg-yellow-100 text-yellow-800 px-4 py-2 rounded-full text-center font-medium">After Effects</div>
-                        <div class="skill-tag bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full text-center font-medium">Canva Design</div>
+                        <div class="skill-tag bg-red-100 text-red-700 px-4 py-2 rounded-full text-center font-medium">Video Editing</div>
+                        <div class="skill-tag bg-sky-100 text-sky-700 px-4 py-2 rounded-full text-center font-medium">Capcut</div>
+                        <div class="skill-tag bg-gray-100 text-gray-700 px-4 py-2 rounded-full text-center font-medium">After Effects</div>
+                        <div class="skill-tag bg-green-50 text-green-700 px-4 py-2 rounded-full text-center font-medium">Canva Design</div>
                     </div>
                     
                     <div class="mt-6">
@@ -161,39 +162,54 @@
                 <p class="text-xl text-gray-600">A selection of my recent work</p>
             </div>
             
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <!-- Featured Project: Mindwell -->
                 <div class="project-card fade-in bg-white rounded-2xl overflow-hidden shadow-lg lg:col-span-2">
-                    <div class="bg-gradient-to-br from-green-400 to-teal-500 h-48 flex items-center justify-center">
-                        <div class="text-white text-4xl">🧠</div>
+                    <div class="h-48 relative overflow-hidden">
+                        <img src="images/nico-knaack-bxvp8hw6dOM-unsplash.jpg" alt="Mindwell Platform" class="w-full h-full object-cover">
+                        <div class="absolute bottom-4 left-4 text-white text-4xl drop-shadow-lg">🧠</div>
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-semibold text-gray-800 mb-2">Mindwell - Mental Health Platform</h3>
                         <p class="text-gray-600 mb-4">A comprehensive mental health web application providing resources, self-assessment tools, and support for mental wellness. Built with modern web technologies to create an accessible and user-friendly experience.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">React.js</span>
-                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Node.js</span>
-                            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">MongoDB</span>
-                            <span class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-sm">Express.js</span>
+                            <span class="bg-sky-100 text-sky-700 px-3 py-1 rounded-full text-sm">Python Flask</span>
+                            <span class="bg-red-100 text-red-700 px-3 py-1 rounded-full text-sm">JavaScript</span>
+                            <span class="bg-green-50 text-green-700 px-3 py-1 rounded-full text-sm">SQLite</span>
+                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">OpenAI API</span>
+                            <span class="bg-red-100 text-red-700 px-3 py-1 rounded-full text-sm">HTML/CSS</span>
                         </div>
                         <div class="flex space-x-3">
                             <a href="https://github.com/abu00123/Mindwell-Mental_health.git" target="_blank" class="bg-gray-800 text-white px-4 py-2 rounded-lg text-sm hover:bg-gray-700 transition-colors">View Code</a>
-                            <a href="https://mindwell-mentalhealth-production.up.railway.app/signup" target="_blank" class="bg-green-600 text-white px-4 py-2 rounded-lg text-sm hover:bg-green-700 transition-colors inline-block">Sign Up</a>
+                            <a href="http://127.0.0.1:5501/frontend/signup/signup.html" target="_blank" class="bg-green-600 text-white px-4 py-2 rounded-lg text-sm hover:bg-green-700 transition-colors inline-block">Try Mindwell</a>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Project 2 -->
-                <div class="project-card fade-in bg-white rounded-2xl overflow-hidden shadow-lg">
-                    <div class="bg-gradient-to-br from-blue-400 to-cyan-400 h-48 flex items-center justify-center">
-                        <div class="text-white text-4xl">🌐</div>
+                <!-- Project 2: AgriTech AI -->
+                <div class="project-card fade-in bg-white rounded-2xl overflow-hidden shadow-lg lg:col-span-2">
+                    <div class="h-48 relative overflow-hidden">
+                        <img src="images/lesly-derksen-MgRKs86MJ0s-unsplash.jpg" alt="AgriTech Platform" class="w-full h-full object-cover">
+                        <div class="absolute bottom-4 left-4 text-white text-4xl drop-shadow-lg">🌱</div>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Portfolio Website</h3>
-                        <p class="text-gray-600 mb-4">A responsive portfolio website showcasing my development projects and skills.</p>
-                        <div class="flex space-x-2">
-                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">HTML/CSS</span>
-                            <span class="bg-cyan-100 text-cyan-800 px-3 py-1 rounded-full text-sm">JavaScript</span>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">AgriTech AI for Refugees</h3>
+                        <p class="text-sm text-gray-500 mb-3">Smart Farming Platform for East African Communities</p>
+                        <div class="mb-4">
+                            <p class="text-gray-600" id="agritech-short">Mobile-first humanitarian technology platform empowering refugee farmers with AI-powered crop analysis, weather forecasting, and community knowledge sharing in 4 languages...</p>
+                            <p class="text-gray-600 hidden" id="agritech-full">Mobile-first humanitarian technology platform empowering refugee farmers with AI-powered crop analysis, weather forecasting, and community knowledge sharing in 4 languages. Designed to work offline without data connection and features an intuitive interface accessible to illiterate farmers. The platform includes visual crop disease detection, weather alerts, farming tips, and a community forum where farmers can share knowledge and experiences.</p>
+                            <button onclick="toggleDescription('agritech')" class="text-green-600 hover:text-green-700 text-sm font-medium mt-2" id="agritech-btn">Read more</button>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-green-50 text-green-700 px-3 py-1 rounded-full text-sm">Python</span>
+                            <span class="bg-sky-100 text-sky-700 px-3 py-1 rounded-full text-sm">Streamlit</span>
+                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">OpenCV</span>
+                            <span class="bg-red-100 text-red-700 px-3 py-1 rounded-full text-sm">PWA</span>
+                            <span class="bg-sky-100 text-sky-700 px-3 py-1 rounded-full text-sm">Multi-language</span>
+                        </div>
+                        <div class="flex space-x-3">
+                            <a href="https://github.com/abu00123/agritech-ai-refugees" target="_blank" class="bg-gray-800 text-white px-4 py-2 rounded-lg text-sm hover:bg-gray-700 transition-colors">View Code</a>
+                            <a href="https://agritech-ai-refugees-iosceao6nz5ecszjp9dd8c.streamlit.app/" target="_blank" class="bg-green-600 text-white px-4 py-2 rounded-lg text-sm hover:bg-green-700 transition-colors">Live Demo</a>
                         </div>
                     </div>
                 </div>
@@ -212,12 +228,7 @@
                     </div>
                 </div>
             </div>
-            
-            <div class="text-center mt-12">
-                <button class="bg-purple-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-purple-700 transition-colors">
-                    View All Projects
-                </button>
-            </div>
+
         </div>
     </section>
 
@@ -472,6 +483,23 @@
         // Initialize animations
         window.addEventListener('scroll', handleScrollAnimations);
         window.addEventListener('load', handleScrollAnimations);
+
+        // Toggle description function
+        function toggleDescription(project) {
+            const shortDesc = document.getElementById(project + '-short');
+            const fullDesc = document.getElementById(project + '-full');
+            const btn = document.getElementById(project + '-btn');
+            
+            if (fullDesc.classList.contains('hidden')) {
+                shortDesc.classList.add('hidden');
+                fullDesc.classList.remove('hidden');
+                btn.textContent = 'Read less';
+            } else {
+                shortDesc.classList.remove('hidden');
+                fullDesc.classList.add('hidden');
+                btn.textContent = 'Read more';
+            }
+        }
 
         // Smooth scroll for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
