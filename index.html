@@ -10,6 +10,7 @@
         
         body {
             font-family: 'Inter', sans-serif;
+            background-color: #FFFFFF;
         }
         
         .fade-in {
@@ -32,11 +33,11 @@
         }
         
         .gradient-bg {       
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
         }
         
         .text-gradient {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -51,19 +52,19 @@
         }
     </style>
 </head>
-<body class="bg-gray-50">
+<body class="bg-white">
     <!-- Navigation -->
     <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 shadow-sm">
         <div class="max-w-6xl mx-auto px-6 py-4">
             <div class="flex justify-between items-center">
                 <div class="text-2xl font-bold text-gradient">My Portfolio</div>
                 <div class="hidden md:flex space-x-8">
-                    <a href="#home" class="text-gray-700 hover:text-purple-600 transition-colors">Home</a>
-                    <a href="#about" class="text-gray-700 hover:text-purple-600 transition-colors">About</a>
-                    <a href="#projects" class="text-gray-700 hover:text-purple-600 transition-colors">Projects</a>
-                    <a href="#services" class="text-gray-700 hover:text-purple-600 transition-colors">Services</a>
-                    <a href="#gallery" class="text-gray-700 hover:text-purple-600 transition-colors">Gallery</a>
-                    <a href="#contact" class="text-gray-700 hover:text-purple-600 transition-colors">Contact</a>
+                    <a href="#home" class="text-gray-700 hover:text-blue-600 transition-colors">Home</a>
+                    <a href="#about" class="text-gray-700 hover:text-blue-600 transition-colors">About</a>
+                    <a href="#projects" class="text-gray-700 hover:text-blue-600 transition-colors">Projects</a>
+                    <a href="#services" class="text-gray-700 hover:text-blue-600 transition-colors">Services</a>
+                    <a href="#gallery" class="text-gray-700 hover:text-blue-600 transition-colors">Gallery</a>
+                    <a href="#contact" class="text-gray-700 hover:text-blue-600 transition-colors">Contact</a>
                 </div>
                 <button class="md:hidden text-gray-700" onclick="toggleMobileMenu()">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -72,12 +73,12 @@
                 </button>
             </div>
             <div id="mobileMenu" class="hidden md:hidden mt-4 space-y-2">
-                <a href="#home" class="block text-gray-700 hover:text-purple-600 transition-colors py-2">Home</a>
-                <a href="#about" class="block text-gray-700 hover:text-purple-600 transition-colors py-2">About</a>
-                <a href="#projects" class="block text-gray-700 hover:text-purple-600 transition-colors py-2">Projects</a>
-                <a href="#services" class="block text-gray-700 hover:text-purple-600 transition-colors py-2">Services</a>
-                <a href="#gallery" class="block text-gray-700 hover:text-purple-600 transition-colors py-2">Gallery</a>
-                <a href="#contact" class="block text-gray-700 hover:text-purple-600 transition-colors py-2">Contact</a>
+                <a href="#home" class="block text-gray-700 hover:text-blue-600 transition-colors py-2">Home</a>
+                <a href="#about" class="block text-gray-700 hover:text-blue-600 transition-colors py-2">About</a>
+                <a href="#projects" class="block text-gray-700 hover:text-blue-600 transition-colors py-2">Projects</a>
+                <a href="#services" class="block text-gray-700 hover:text-blue-600 transition-colors py-2">Services</a>
+                <a href="#gallery" class="block text-gray-700 hover:text-blue-600 transition-colors py-2">Gallery</a>
+                <a href="#contact" class="block text-gray-700 hover:text-blue-600 transition-colors py-2">Contact</a>
             </div>
         </div>
     </nav>
@@ -90,12 +91,18 @@
                 <h1 class="text-5xl md:text-7xl font-bold mb-6">Full Stack Developer</h1>
                 <p class="text-xl md:text-2xl mb-8 opacity-90">Building innovative web applications that make a difference</p>
                 <div class="space-x-4">
-                    <button onclick="scrollToSection('projects')" class="bg-white text-purple-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors">
-                        View My Work
-                    </button>
-                    <button onclick="scrollToSection('contact')" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-purple-600 transition-colors">
-                        Get In Touch
-                    </button>
+                    <a href="https://drive.google.com/file/d/13tENHtTYcz2GqaL3roXnmXiB5K024Bow/view?usp=drive_link" target="_blank" class="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-50 transition-colors inline-flex items-center">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                        My Resume
+                    </a>
+                    <a href="https://abu00123.github.io/projects-showcase/" target="_blank" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition-colors inline-flex items-center">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+                        </svg>
+                        View All Projects
+                    </a>
                 </div>
             </div>
         </div>
@@ -105,8 +112,8 @@
     <section id="about" class="py-20 bg-white">
         <div class="max-w-6xl mx-auto px-6">
             <div class="fade-in text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-800 mb-4">About Me</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto text-justify leading-relaxed">
+                <h2 class="text-4xl font-bold mb-4" style="color: #1F2937;">About Me</h2>
+                <p class="text-xl max-w-3xl mx-auto text-justify leading-relaxed" style="color: #6B7280;">
                     As a passionate full-stack web developer, I bring a unique blend of technical skill and creative vision to every project. My expertise extends beyond coding into graphic design, where I craft intuitive and visually compelling user experiences. I am also an educator and a virtual assistant, driven by a commitment to sharing knowledge and providing seamless support. Whether I'm building robust applications, designing captivating visuals, or helping others navigate the digital landscape, I am dedicated to creating impactful and meaningful experiences from start to finish.
                 </p>
             </div>
@@ -115,33 +122,33 @@
                 <div class="fade-in">
                     <div class="relative rounded-2xl overflow-hidden h-96 shadow-xl">
                         <img src="images/aboutme.jpg" alt="About Me" class="w-full h-full object-cover object-top">
-                        <div class="absolute inset-0 bg-gradient-to-t from-purple-600/20 to-transparent"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-blue-600/20 to-transparent"></div>
                     </div>
                 </div>
                 
                 <div class="fade-in">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-6">My Development Approach</h3>
-                    <p class="text-gray-600 mb-6">
+                    <h3 class="text-2xl font-semibold mb-6" style="color: #1F2937;">My Development Approach</h3>
+                    <p class="mb-6" style="color: #6B7280;">
                         I believe in building applications that truly serve users' needs. Every project starts with understanding the problem deeply and ends with a solution that's both technically robust and user-friendly.
                     </p>
                     
                     <div class="grid grid-cols-2 gap-4">
-                        <div class="skill-tag bg-red-100 text-red-700 px-4 py-2 rounded-full text-center font-medium">React.js</div>
-                        <div class="skill-tag bg-sky-100 text-sky-700 px-4 py-2 rounded-full text-center font-medium">Node.js</div>
-                        <div class="skill-tag bg-green-50 text-green-700 px-4 py-2 rounded-full text-center font-medium">MongoDB</div>
-                        <div class="skill-tag bg-gray-100 text-gray-700 px-4 py-2 rounded-full text-center font-medium">Python</div>
+                        <div class="skill-tag px-4 py-2 rounded-full text-center font-medium" style="background-color: #EFF6FF; color: #2563EB;">React.js</div>
+                        <div class="skill-tag px-4 py-2 rounded-full text-center font-medium" style="background-color: #EFF6FF; color: #2563EB;">Node.js</div>
+                        <div class="skill-tag px-4 py-2 rounded-full text-center font-medium" style="background-color: #EFF6FF; color: #2563EB;">MongoDB</div>
+                        <div class="skill-tag px-4 py-2 rounded-full text-center font-medium" style="background-color: #F3F4F6; color: #6B7280;">Python</div>
                     </div>
                     
-                    <h4 class="text-lg font-semibold text-gray-800 mt-8 mb-4">Creative Skills</h4>
+                    <h4 class="text-lg font-semibold mt-8 mb-4" style="color: #1F2937;">Creative Skills</h4>
                     <div class="grid grid-cols-2 gap-4">
-                        <div class="skill-tag bg-red-100 text-red-700 px-4 py-2 rounded-full text-center font-medium">Video Editing</div>
-                        <div class="skill-tag bg-sky-100 text-sky-700 px-4 py-2 rounded-full text-center font-medium">Capcut</div>
-                        <div class="skill-tag bg-gray-100 text-gray-700 px-4 py-2 rounded-full text-center font-medium">After Effects</div>
-                        <div class="skill-tag bg-green-50 text-green-700 px-4 py-2 rounded-full text-center font-medium">Canva Design</div>
+                        <div class="skill-tag px-4 py-2 rounded-full text-center font-medium" style="background-color: #EFF6FF; color: #2563EB;">Video Editing</div>
+                        <div class="skill-tag px-4 py-2 rounded-full text-center font-medium" style="background-color: #EFF6FF; color: #2563EB;">Capcut</div>
+                        <div class="skill-tag px-4 py-2 rounded-full text-center font-medium" style="background-color: #F3F4F6; color: #6B7280;">After Effects</div>
+                        <div class="skill-tag px-4 py-2 rounded-full text-center font-medium" style="background-color: #EFF6FF; color: #2563EB;">Canva Design</div>
                     </div>
                     
                     <div class="mt-6">
-                        <a href="https://drive.google.com/drive/u/0/folders/1bmS6NEB9xvuTvOJgsNC6lBtEwRuRA8th" target="_blank" class="inline-flex items-center bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors">
+                        <a href="https://drive.google.com/drive/u/0/folders/1bmS6NEB9xvuTvOJgsNC6lBtEwRuRA8th" target="_blank" class="inline-flex items-center text-white px-4 py-2 rounded-lg transition-colors" style="background-color: #2563EB;" onmouseover="this.style.backgroundColor='#1D4ED8'" onmouseout="this.style.backgroundColor='#2563EB'">
                             <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
@@ -155,11 +162,11 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-20 bg-gray-50">
+    <section id="projects" class="py-20" style="background-color: #F8F9FA;">
         <div class="max-w-6xl mx-auto px-6">
             <div class="fade-in text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-800 mb-4">Featured Projects</h2>
-                <p class="text-xl text-gray-600">A selection of my recent work</p>
+                <h2 class="text-4xl font-bold mb-4" style="color: #1F2937;">Featured Projects</h2>
+                <p class="text-xl" style="color: #6B7280;">A selection of my recent work</p>
             </div>
             
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -170,18 +177,18 @@
                         <div class="absolute bottom-4 left-4 text-white text-4xl drop-shadow-lg">🧠</div>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Mindwell - Mental Health Platform</h3>
-                        <p class="text-gray-600 mb-4">A comprehensive mental health web application providing resources, self-assessment tools, and support for mental wellness. Built with modern web technologies to create an accessible and user-friendly experience.</p>
+                        <h3 class="text-xl font-semibold mb-2" style="color: #1F2937;">Mindwell - Mental Health Platform</h3>
+                        <p class="mb-4" style="color: #6B7280;">A comprehensive mental health web application providing resources, self-assessment tools, and support for mental wellness. Built with modern web technologies to create an accessible and user-friendly experience.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-sky-100 text-sky-700 px-3 py-1 rounded-full text-sm">Python Flask</span>
-                            <span class="bg-red-100 text-red-700 px-3 py-1 rounded-full text-sm">JavaScript</span>
-                            <span class="bg-green-50 text-green-700 px-3 py-1 rounded-full text-sm">SQLite</span>
-                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">OpenAI API</span>
-                            <span class="bg-red-100 text-red-700 px-3 py-1 rounded-full text-sm">HTML/CSS</span>
+                            <span class="px-3 py-1 rounded-full text-sm" style="background-color: #EFF6FF; color: #2563EB;">Python Flask</span>
+                            <span class="px-3 py-1 rounded-full text-sm" style="background-color: #EFF6FF; color: #2563EB;">JavaScript</span>
+                            <span class="px-3 py-1 rounded-full text-sm" style="background-color: #EFF6FF; color: #2563EB;">SQLite</span>
+                            <span class="px-3 py-1 rounded-full text-sm" style="background-color: #F3F4F6; color: #6B7280;">OpenAI API</span>
+                            <span class="px-3 py-1 rounded-full text-sm" style="background-color: #EFF6FF; color: #2563EB;">HTML/CSS</span>
                         </div>
                         <div class="flex space-x-3">
-                            <a href="https://github.com/abu00123/Mindwell-Mental_health.git" target="_blank" class="bg-gray-800 text-white px-4 py-2 rounded-lg text-sm hover:bg-gray-700 transition-colors">View Code</a>
-                            <a href="http://127.0.0.1:5501/frontend/signup/signup.html" target="_blank" class="bg-green-600 text-white px-4 py-2 rounded-lg text-sm hover:bg-green-700 transition-colors inline-block">Try Mindwell</a>
+                            <a href="https://github.com/abu00123/Mindwell-Mental_health.git" target="_blank" class="text-white px-4 py-2 rounded-lg text-sm transition-colors" style="background-color: #1F2937;" onmouseover="this.style.backgroundColor='#111827'" onmouseout="this.style.backgroundColor='#1F2937'">View Code</a>
+                            <a href="http://127.0.0.1:5501/frontend/signup/signup.html" target="_blank" class="text-white px-4 py-2 rounded-lg text-sm transition-colors inline-block" style="background-color: #2563EB;" onmouseover="this.style.backgroundColor='#1D4ED8'" onmouseout="this.style.backgroundColor='#2563EB'">Try Mindwell</a>
                         </div>
                     </div>
                 </div>
@@ -193,23 +200,32 @@
                         <div class="absolute bottom-4 left-4 text-white text-4xl drop-shadow-lg">🌱</div>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">AgriTech AI for Refugees</h3>
-                        <p class="text-sm text-gray-500 mb-3">Smart Farming Platform for East African Communities</p>
+                        <h3 class="text-xl font-semibold mb-2" style="color: #1F2937;">AgriTech AI for Refugees</h3>
+                        <p class="text-sm mb-3" style="color: #9CA3AF;">Smart Farming Platform for East African Communities</p>
                         <div class="mb-4">
-                            <p class="text-gray-600" id="agritech-short">Mobile-first humanitarian technology platform empowering refugee farmers with AI-powered crop analysis, weather forecasting, and community knowledge sharing in 4 languages...</p>
-                            <p class="text-gray-600 hidden" id="agritech-full">Mobile-first humanitarian technology platform empowering refugee farmers with AI-powered crop analysis, weather forecasting, and community knowledge sharing in 4 languages. Designed to work offline without data connection and features an intuitive interface accessible to illiterate farmers. The platform includes visual crop disease detection, weather alerts, farming tips, and a community forum where farmers can share knowledge and experiences.</p>
-                            <button onclick="toggleDescription('agritech')" class="text-green-600 hover:text-green-700 text-sm font-medium mt-2" id="agritech-btn">Read more</button>
+                            <p id="agritech-short" style="color: #6B7280;">Mobile-first humanitarian technology platform empowering refugee farmers with AI-powered crop analysis, weather forecasting, and community knowledge sharing in 4 languages...</p>
+                            <div class="hidden" id="agritech-full" style="color: #6B7280;">
+                                <p class="mb-4">Mobile-first humanitarian technology platform empowering refugee farmers with AI-powered crop analysis, weather forecasting, and community knowledge sharing in 4 languages. Designed to work offline without data connection and features an intuitive interface accessible to illiterate farmers. The platform includes visual crop disease detection, weather alerts, farming tips, and a community forum where farmers can share knowledge and experiences.</p>
+                                
+                                <div class="bg-green-50 border-l-4 border-green-400 p-4 rounded-r-lg mb-4">
+                                    <h4 class="font-semibold text-green-800 mb-2">Personal Reflection</h4>
+                                    <p class="text-green-700 text-sm leading-relaxed">
+                                        As a refugee myself, I understand firsthand the challenges faced by displaced communities. This project represents more than just a technical solution—it's a reflection of my journey from surviving tough circumstances to now being in a position where I can create meaningful impact. Having experienced the struggles of displacement, I am deeply motivated to use my skills in technology to empower my community in refugee camps. This platform is my way of giving back, ensuring that fellow refugees have access to the tools and knowledge they need to build sustainable livelihoods through agriculture. Every line of code written for this project carries the hope of transforming lives and creating opportunities where there were once only challenges. While this might just be a theory now, I hope to materialize it and much more in the near future, turning this vision into a tangible reality that truly serves my community.
+                                    </p>
+                                </div>
+                            </div>
+                            <button onclick="toggleDescription('agritech')" class="text-sm font-medium mt-2" style="color: #2563EB;" onmouseover="this.style.color='#1D4ED8'" onmouseout="this.style.color='#2563EB'" id="agritech-btn">Read more</button>
                         </div>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-green-50 text-green-700 px-3 py-1 rounded-full text-sm">Python</span>
-                            <span class="bg-sky-100 text-sky-700 px-3 py-1 rounded-full text-sm">Streamlit</span>
-                            <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">OpenCV</span>
-                            <span class="bg-red-100 text-red-700 px-3 py-1 rounded-full text-sm">PWA</span>
-                            <span class="bg-sky-100 text-sky-700 px-3 py-1 rounded-full text-sm">Multi-language</span>
+                            <span class="px-3 py-1 rounded-full text-sm" style="background-color: #EFF6FF; color: #2563EB;">Python</span>
+                            <span class="px-3 py-1 rounded-full text-sm" style="background-color: #EFF6FF; color: #2563EB;">Streamlit</span>
+                            <span class="px-3 py-1 rounded-full text-sm" style="background-color: #F3F4F6; color: #6B7280;">OpenCV</span>
+                            <span class="px-3 py-1 rounded-full text-sm" style="background-color: #EFF6FF; color: #2563EB;">PWA</span>
+                            <span class="px-3 py-1 rounded-full text-sm" style="background-color: #EFF6FF; color: #2563EB;">Multi-language</span>
                         </div>
                         <div class="flex space-x-3">
-                            <a href="https://github.com/abu00123/agritech-ai-refugees" target="_blank" class="bg-gray-800 text-white px-4 py-2 rounded-lg text-sm hover:bg-gray-700 transition-colors">View Code</a>
-                            <a href="https://agritech-ai-refugees-iosceao6nz5ecszjp9dd8c.streamlit.app/" target="_blank" class="bg-green-600 text-white px-4 py-2 rounded-lg text-sm hover:bg-green-700 transition-colors">Live Demo</a>
+                            <a href="https://github.com/abu00123/agritech-ai-refugees" target="_blank" class="text-white px-4 py-2 rounded-lg text-sm transition-colors" style="background-color: #1F2937;" onmouseover="this.style.backgroundColor='#111827'" onmouseout="this.style.backgroundColor='#1F2937'">View Code</a>
+                            <a href="https://agritech-ai-refugees-iosceao6nz5ecszjp9dd8c.streamlit.app/" target="_blank" class="text-white px-4 py-2 rounded-lg text-sm transition-colors" style="background-color: #2563EB;" onmouseover="this.style.backgroundColor='#1D4ED8'" onmouseout="this.style.backgroundColor='#2563EB'">Live Demo</a>
                         </div>
                     </div>
                 </div>
@@ -220,8 +236,8 @@
                         <div class="text-white text-4xl">⚡</div>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Coming Soon</h3>
-                        <p class="text-gray-600 mb-4">More exciting projects are in development. Stay tuned for updates!</p>
+                        <h3 class="text-xl font-semibold mb-2" style="color: #1F2937;">Coming Soon</h3>
+                        <p class="mb-4" style="color: #6B7280;">More exciting projects are in development. Stay tuned for updates!</p>
                         <div class="flex space-x-2">
                             <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">In Progress</span>
                         </div>
@@ -233,11 +249,11 @@
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="py-20 bg-gray-50">
+    <section id="services" class="py-20" style="background-color: #F8F9FA;">
         <div class="max-w-6xl mx-auto px-6">
             <div class="fade-in text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-800 mb-4">Professional Services</h2>
-                <p class="text-xl text-gray-600">Comprehensive support across multiple domains</p>
+                <h2 class="text-4xl font-bold mb-4" style="color: #1F2937;">Professional Services</h2>
+                <p class="text-xl" style="color: #6B7280;">Comprehensive support across multiple domains</p>
             </div>
             
             <div class="grid lg:grid-cols-2 gap-12">
@@ -249,7 +265,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                             </svg>
                         </div>
-                        <h3 class="text-2xl font-bold text-gray-800">Virtual Assistant</h3>
+                        <h3 class="text-2xl font-bold" style="color: #1F2937;">Virtual Assistant</h3>
                     </div>
                     <div class="mb-4">
                         <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">ALX Africa Graduate</span>
@@ -267,7 +283,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
                             </svg>
                         </div>
-                        <h3 class="text-2xl font-bold text-gray-800">Educator</h3>
+                        <h3 class="text-2xl font-bold" style="color: #1F2937;">Educator</h3>
                     </div>
                     <div class="mb-4">
                         <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">Learning Specialist</span>
@@ -284,8 +300,8 @@
     <section id="gallery" class="py-20 bg-white">
         <div class="max-w-6xl mx-auto px-6">
             <div class="fade-in text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-800 mb-4">Gallery</h2>
-                <p class="text-xl text-gray-600">Places I've visited and events I've attended</p>
+                <h2 class="text-4xl font-bold mb-4" style="color: #1F2937;">Gallery</h2>
+                <p class="text-xl" style="color: #6B7280;">Places I've visited and events I've attended</p>
             </div>
             
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -339,13 +355,13 @@
     <section id="contact" class="py-20 bg-white">
         <div class="max-w-4xl mx-auto px-6">
             <div class="fade-in text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-800 mb-4">Let's Work Together</h2>
-                <p class="text-xl text-gray-600">Have a project in mind? I'd love to hear about it!</p>
+                <h2 class="text-4xl font-bold mb-4" style="color: #1F2937;">Let's Work Together</h2>
+                <p class="text-xl" style="color: #6B7280;">Have a project in mind? I'd love to hear about it!</p>
             </div>
             
             <div class="grid md:grid-cols-2 gap-12">
                 <div class="fade-in">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-6">Get In Touch</h3>
+                    <h3 class="text-2xl font-semibold mb-6" style="color: #1F2937;">Get In Touch</h3>
                     <div class="space-y-4">
                         <div class="flex items-center space-x-4">
                             <div class="bg-purple-100 p-3 rounded-full">
@@ -354,8 +370,8 @@
                                 </svg>
                             </div>
                             <div>
-                                <p class="font-medium text-gray-800">Email</p>
-                                <p class="text-gray-600">a.garang@alustudent.com</p>
+                                <p class="font-medium" style="color: #1F2937;">Email</p>
+                                <p style="color: #6B7280;">a.garang@alustudent.com</p>
                             </div>
                         </div>
                         
@@ -366,8 +382,8 @@
                                 </svg>
                             </div>
                             <div>
-                                <p class="font-medium text-gray-800">GitHub</p>
-                                <p class="text-gray-600">https://github.com/abu00123</p>
+                                <p class="font-medium" style="color: #1F2937;">GitHub</p>
+                                <p style="color: #6B7280;">https://github.com/abu00123</p>
                             </div>
                         </div>
                         
@@ -379,8 +395,8 @@
                                 </svg>
                             </div>
                             <div>
-                                <p class="font-medium text-gray-800">Location</p>
-                                <p class="text-gray-600">Available for Remote Work</p>
+                                <p class="font-medium" style="color: #1F2937;">Location</p>
+                                <p style="color: #6B7280;">Available for Remote Work</p>
                             </div>
                         </div>
                     </div>
@@ -389,25 +405,25 @@
                 <div class="fade-in">
                     <form class="space-y-6" onsubmit="handleSubmit(event)">
                         <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-2">Name</label>
-                            <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent" placeholder="Your name">
+                            <label class="block text-sm font-medium mb-2" style="color: #1F2937;">Name</label>
+                            <input type="text" class="w-full px-4 py-3 rounded-lg focus:ring-2 focus:border-transparent" style="border: 1px solid #E5E7EB; color: #1F2937;" onfocus="this.style.borderColor='#2563EB'; this.style.boxShadow='0 0 0 2px rgba(37, 99, 235, 0.2)'" onblur="this.style.borderColor='#E5E7EB'; this.style.boxShadow='none'" placeholder="Your name">
                         </div>
                         
                         <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
-                            <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent" placeholder="your@email.com">
+                            <label class="block text-sm font-medium mb-2" style="color: #1F2937;">Email</label>
+                            <input type="email" class="w-full px-4 py-3 rounded-lg focus:ring-2 focus:border-transparent" style="border: 1px solid #E5E7EB; color: #1F2937;" onfocus="this.style.borderColor='#2563EB'; this.style.boxShadow='0 0 0 2px rgba(37, 99, 235, 0.2)'" onblur="this.style.borderColor='#E5E7EB'; this.style.boxShadow='none'" placeholder="your@email.com">
                         </div>
                         
                         <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-2">Message</label>
-                            <textarea rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent" placeholder="Tell me about your project..."></textarea>
+                            <label class="block text-sm font-medium mb-2" style="color: #1F2937;">Message</label>
+                            <textarea rows="4" class="w-full px-4 py-3 rounded-lg focus:ring-2 focus:border-transparent" style="border: 1px solid #E5E7EB; color: #1F2937;" onfocus="this.style.borderColor='#2563EB'; this.style.boxShadow='0 0 0 2px rgba(37, 99, 235, 0.2)'" onblur="this.style.borderColor='#E5E7EB'; this.style.boxShadow='none'" placeholder="Tell me about your project..."></textarea>
                         </div>
                         
-                        <button type="submit" class="w-full bg-purple-600 text-white py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors">
+                        <button type="submit" class="w-full text-white py-3 rounded-lg font-semibold transition-colors" style="background-color: #2563EB;" onmouseover="this.style.backgroundColor='#1D4ED8'" onmouseout="this.style.backgroundColor='#2563EB'">
                             Send Message
                         </button>
                         
-                        <p class="text-sm text-gray-500 text-center">
+                        <p class="text-sm text-center" style="color: #9CA3AF;">
                             <span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded">Demo Form</span> - This is a sample contact form
                         </p>
                     </form>
@@ -421,7 +437,7 @@
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center">
                 <div class="text-2xl font-bold text-gradient mb-4">Abraham's Portfolio Website</div>
-                <p class="text-gray-400 mb-6">Building web applications that make a difference</p>
+                <p class="mb-6" style="color: #9CA3AF;">Building web applications that make a difference</p>
                 <div class="flex justify-center space-x-6">
                     <a href="#" class="text-gray-400 hover:text-white transition-colors">
                         <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abu's Projects Showcase</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FFFFFF;
+        }
+        
+        .project-card {
+            transition: all 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-8px);
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Header -->
+    <header class="bg-white shadow-sm border-b">
+        <div class="max-w-6xl mx-auto px-6 py-6">
+            <div class="flex items-center justify-between">
+                <div>
+                    <h1 class="text-3xl font-bold" style="color: #1F2937;">Abu's Projects</h1>
+                    <p class="text-lg" style="color: #6B7280;">Full Stack Developer Portfolio</p>
+                </div>
+                <a href="https://abu00123.github.io/portfolio-website/" class="text-white px-6 py-2 rounded-lg transition-colors" style="background-color: #2563EB;" onmouseover="this.style.backgroundColor='#1D4ED8'" onmouseout="this.style.backgroundColor='#2563EB'">
+                    Back to Portfolio
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Projects Grid -->
+    <main class="py-12" style="background-color: #F8F9FA;">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Project 1: Mindwell -->
+                <div class="project-card fade-in bg-white rounded-2xl overflow-hidden shadow-lg">
+                    <div class="h-48 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
+                        <div class="text-white text-6xl">🧠</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2" style="color: #1F2937;">Mindwell - Mental Health Platform</h3>
+                        <p class="mb-4" style="color: #6B7280;">A comprehensive mental health web application providing resources, self-assessment tools, and support for mental wellness.</p>
+                        
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 rounded-full text-sm" style="background-color: #EFF6FF; color: #2563EB;">Python Flask</span>
+                            <span class="px-3 py-1 rounded-full text-sm" style="background-color: #EFF6FF; color: #2563EB;">JavaScript</span>
+                            <span class="px-3 py-1 rounded-full text-sm" style="background-color: #EFF6FF; color: #2563EB;">SQLite</span>
+                            <span class="px-3 py-1 rounded-full text-sm" style="background-color: #F3F4F6; color: #6B7280;">OpenAI API</span>
+                        </div>
+                        
+                        <div class="flex space-x-3">
+                            <a href="https://github.com/abu00123/Mindwell-Mental_health.git" target="_blank" class="text-white px-4 py-2 rounded-lg text-sm transition-colors" style="background-color: #1F2937;" onmouseover="this.style.backgroundColor='#111827'" onmouseout="this.style.backgroundColor='#1F2937'">GitHub</a>
+                            <a href="http://127.0.0.1:5501/frontend/signup/signup.html" target="_blank" class="text-white px-4 py-2 rounded-lg text-sm transition-colors" style="background-color: #2563EB;" onmouseover="this.style.backgroundColor='#1D4ED8'" onmouseout="this.style.backgroundColor='#2563EB'">Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: AgriTech AI -->
+                <div class="project-card fade-in bg-white rounded-2xl overflow-hidden shadow-lg">
+                    <div class="h-48 bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center">
+                        <div class="text-white text-6xl">🌱</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2" style="color: #1F2937;">AgriTech AI for Refugees</h3>
+                        <p class="mb-4" style="color: #6B7280;">Smart farming platform empowering refugee farmers with AI-powered crop analysis and community knowledge sharing.</p>
+                        
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 rounded-full text-sm" style="background-color: #EFF6FF; color: #2563EB;">Python</span>
+                            <span class="px-3 py-1 rounded-full text-sm" style="background-color: #EFF6FF; color: #2563EB;">Streamlit</span>
+                            <span class="px-3 py-1 rounded-full text-sm" style="background-color: #F3F4F6; color: #6B7280;">OpenCV</span>
+                            <span class="px-3 py-1 rounded-full text-sm" style="background-color: #EFF6FF; color: #2563EB;">PWA</span>
+                        </div>
+                        
+                        <div class="flex space-x-3">
+                            <a href="https://github.com/abu00123/agritech-ai-refugees" target="_blank" class="text-white px-4 py-2 rounded-lg text-sm transition-colors" style="background-color: #1F2937;" onmouseover="this.style.backgroundColor='#111827'" onmouseout="this.style.backgroundColor='#1F2937'">GitHub</a>
+                            <a href="https://agritech-ai-refugees-iosceao6nz5ecszjp9dd8c.streamlit.app/" target="_blank" class="text-white px-4 py-2 rounded-lg text-sm transition-colors" style="background-color: #2563EB;" onmouseover="this.style.backgroundColor='#1D4ED8'" onmouseout="this.style.backgroundColor='#2563EB'">Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Portfolio Website -->
+                <div class="project-card fade-in bg-white rounded-2xl overflow-hidden shadow-lg">
+                    <div class="h-48 bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center">
+                        <div class="text-white text-6xl">💼</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2" style="color: #1F2937;">Personal Portfolio Website</h3>
+                        <p class="mb-4" style="color: #6B7280;">A responsive portfolio website showcasing my skills, projects, and professional experience as a full-stack developer.</p>
+                        
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 rounded-full text-sm" style="background-color: #EFF6FF; color: #2563EB;">HTML5</span>
+                            <span class="px-3 py-1 rounded-full text-sm" style="background-color: #EFF6FF; color: #2563EB;">Tailwind CSS</span>
+                            <span class="px-3 py-1 rounded-full text-sm" style="background-color: #EFF6FF; color: #2563EB;">JavaScript</span>
+                            <span class="px-3 py-1 rounded-full text-sm" style="background-color: #F3F4F6; color: #6B7280;">GitHub Pages</span>
+                        </div>
+                        
+                        <div class="flex space-x-3">
+                            <a href="https://github.com/abu00123/portfolio-website" target="_blank" class="text-white px-4 py-2 rounded-lg text-sm transition-colors" style="background-color: #1F2937;" onmouseover="this.style.backgroundColor='#111827'" onmouseout="this.style.backgroundColor='#1F2937'">GitHub</a>
+                            <a href="https://abu00123.github.io/portfolio-website/" target="_blank" class="text-white px-4 py-2 rounded-lg text-sm transition-colors" style="background-color: #2563EB;" onmouseover="this.style.backgroundColor='#1D4ED8'" onmouseout="this.style.backgroundColor='#2563EB'">Live Site</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Placeholder for future projects -->
+                <div class="project-card fade-in bg-white rounded-2xl overflow-hidden shadow-lg border-2 border-dashed" style="border-color: #E5E7EB;">
+                    <div class="h-48 flex items-center justify-center" style="background-color: #F9FAFB;">
+                        <div style="color: #9CA3AF;" class="text-6xl">⚡</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2" style="color: #1F2937;">Coming Soon</h3>
+                        <p class="mb-4" style="color: #6B7280;">More exciting projects are in development. Stay tuned for updates!</p>
+                        
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 rounded-full text-sm" style="background-color: #F3F4F6; color: #9CA3AF;">In Progress</span>
+                        </div>
+                        
+                        <div class="flex space-x-3">
+                            <button disabled class="text-white px-4 py-2 rounded-lg text-sm opacity-50 cursor-not-allowed" style="background-color: #9CA3AF;">Coming Soon</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t py-8">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <p style="color: #6B7280;">© 2024 Abu's Portfolio. Built with passion for meaningful impact.</p>
+            <div class="mt-4">
+                <a href="mailto:a.garang@alustudent.com" class="text-blue-600 hover:text-blue-700 mx-3">Email</a>
+                <a href="https://github.com/abu00123" target="_blank" class="text-blue-600 hover:text-blue-700 mx-3">GitHub</a>
+                <a href="https://abu00123.github.io/portfolio-website/" class="text-blue-600 hover:text-blue-700 mx-3">Portfolio</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Fade in animation on scroll
+        function handleScrollAnimations() {
+            const elements = document.querySelectorAll('.fade-in');
+            
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+
+        // Initialize animations
+        window.addEventListener('scroll', handleScrollAnimations);
+        window.addEventListener('load', handleScrollAnimations);
+    </script>
+</body>
+</html>
